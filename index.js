@@ -6,7 +6,6 @@ const port = process.env.PORT || 5000;
 const functions = require('./functions/functions')
 const discord = require('discord.js')
 const client = new discord.Client()
-//const config = require('./config.json')
 const command = require('./commands/command')
 app.use(express.json());
 
