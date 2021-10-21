@@ -14,8 +14,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Aaron Green",
   "license": "ISC",
   "description": "",
-  "module": "CommonJS"
+  "module": "CommonJS",
+  "engines": {
+    "node": "16.11.0"
+  }
 }
