@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const commando = require('discord.js-commando');
-const botChan = 'https://discord.com/api/webhooks/896968627138465792/qWyEe86XfW-aUig0fweOeHzrNOajvXWtWsd1uf0b0WVGO0rU2AXI-qCNXqkeXw2HUeiI'
 const prefix = '!';
 const fs = require('fs');
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));

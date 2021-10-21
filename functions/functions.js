@@ -1,6 +1,5 @@
 const fetch = require("node-fetch");
 const osURL = "https://api.opensea.io/api/v1/collections?asset_owner=0xc724c231Af2A7494BDe4e49ef590214117B207bF"
-const obj = [];
 function getChuck(){
     return fetch('http://api.icndb.com/jokes/random')
     .then(res => {
