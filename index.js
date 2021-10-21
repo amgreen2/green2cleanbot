@@ -8,7 +8,9 @@ const discord = require('discord.js')
 const client = new discord.Client()
 const command = require('./commands/command')
 app.use(express.json());
-
+app.listen(port, "0.0.0.0", function() {
+    console.log("Listening on Port 5000");
+    });
 client.on('ready', msg => {
     console.log('The client is ready!')
     command(client, ['ping', 'cup'], message => {
