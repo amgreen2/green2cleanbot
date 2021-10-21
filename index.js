@@ -1,9 +1,14 @@
+require("dotenv").config();
+//const cors = require("cors");
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 5000;
 const functions = require('./functions/functions')
 const discord = require('discord.js')
-const fetch = require("node-fetch")
 const client = new discord.Client()
-const config = require('./config.json')
+//const config = require('./config.json')
 const command = require('./commands/command')
+app.use(express.json());
 
 client.on('ready', msg => {
     console.log('The client is ready!')
@@ -57,4 +62,4 @@ client.on('ready', msg => {
     })
 })
 
-client.login(config.token)
+client.login(process.env.BOT_KEY)
