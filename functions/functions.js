@@ -43,6 +43,10 @@ async function getFloor(){
         return obj;
     })    
 }
+var http = require("http");
+setInterval(function() {
+    http.get(`https://${env.process.APP_URL}.herokuapp.com/`);
+}, 4500000); // every 75 minutes (4500000)
 module.exports = {
     getChuck,getQuote,getFloor,getJoke,
 }
