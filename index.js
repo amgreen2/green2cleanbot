@@ -67,5 +67,4 @@ var http = require("http");
 setInterval(function() {
     http.get(`https://${process.env.APP_NAME}.herokuapp.com/`);
 }, 4500000); // every 75 minutes (4500000)
-setInterval(ping, 20*60*1000); // I have set to 20 mins interval
 client.login(process.env.BOT_KEY)
