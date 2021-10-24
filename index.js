@@ -1,5 +1,5 @@
 require("dotenv").config();
-require('heroku-self-ping').default(`https://${env.process.APP_NAME}.herokuapp.com/`);
+//require('heroku-self-ping').default(`https://${env.process.APP_NAME}.herokuapp.com/`);
 //const cors = require("cors");
 const express = require("express");
 const app = express();
