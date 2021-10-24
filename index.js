@@ -1,5 +1,5 @@
 require("dotenv").config();
-//require('heroku-self-ping').default(`https://${env.process.APP_NAME}.herokuapp.com/`);
+require('heroku-self-ping').default(`https://${env.process.APP_NAME}.herokuapp.com/`);
 //const cors = require("cors");
 const express = require("express");
 const app = express();
@@ -67,4 +67,11 @@ var http = require("http");
 setInterval(function() {
     http.get(`https://${env.process.APP_NAME}.herokuapp.com/`);
 }, 4500000); // every 75 minutes (4500000)
+const request = require('request');
+const ping = () => request(`https://${env.process.APP_NAME}.herokuapp.com/`, (error, response, body) => {
+    console.log('error:', error); // Print the error if one occurred
+    console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+    console.log('body:', body); // Print body of response received
+});
+setInterval(ping, 20*60*1000); // I have set to 20 mins interval
 client.login(process.env.BOT_KEY)
