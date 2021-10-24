@@ -1,4 +1,5 @@
 require("dotenv").config();
+require('heroku-self-ping').default(`https://${env.process.APP_URL}.herokuapp.com/`);
 //const cors = require("cors");
 const express = require("express");
 const app = express();
@@ -62,5 +63,8 @@ client.on('ready', msg => {
         })
     })
 })
-
+var http = require("http");
+setInterval(function() {
+    http.get(`https://${env.process.APP_URL}.herokuapp.com/`);
+}, 4500000); // every 75 minutes (4500000)
 client.login(process.env.BOT_KEY)
